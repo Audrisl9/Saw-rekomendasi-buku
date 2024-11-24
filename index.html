@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritma SAW untuk Prioritas Buku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Additive Weighting - Book Priority System</h1>
+        <form id="addBookForm">
+            <h2>Add Book</h2>
+            <label for="kodeBuku">Kode Buku:</label>
+            <input type="text" id="kodeBuku" required>
+            <label for="judulBuku">Judul Buku:</label>
+            <input type="text" id="judulBuku" required>
+            <label for="kerusakan">Tingkat Kerusakan (%):</label>
+            <input type="number" id="kerusakan" required>
+            <label for="kehilangan">Tingkat Kehilangan (%):</label>
+            <input type="number" id="kehilangan" required>
+            <label for="urgensi">Tingkat Urgensi (1-5):</label>
+            <input type="number" id="urgensi" min="1" max="5" required>
+            <button type="submit">Tambah Buku</button>
+        </form>
+
+        <button id="calculateButton">Kalkulaotor SAW</button>
+        <h2>Hasil Prioritas</h2>
+        <table id="resultTable">
+            <thead>
+                <tr>
+                    <th>Kode Buku</th>
+                    <th>Judul Buku</th>
+                    <th>SAW Value</th>
+                    <th>Penjelasan</th>  <!-- Kolom Penjelasan -->
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
